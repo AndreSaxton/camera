@@ -1,0 +1,36 @@
+<<ion-header>
+  <ion-navbar>
+    <ion-title>
+      App de Fotos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block (click)="tirarFoto()">
+    Tirar Foto
+  </button>
+
+  <ion-card>
+    <ion-card-header>Foto</ion-card-header>
+    <ion-card-content>
+    	<img [src]="foto" *ngIf="foto"/>
+    </ion-card-content>
+      
+    
+  </ion-card>
+
+<div style="width: 100%; text-align: center;"  style="display: none;" id="btn2">
+	<div style="display: table; margin: 0 auto;">
+	<table>
+		<tr><td><label for="assunto">Digite seu Email</label></td></tr>
+		<tr><td><input type="text" name="assunto" id="assunto" [(ngModel)]="assunto"></td></tr>
+		<tr><td><label for="mensagem">Mensagem</label></td></tr>		
+		<tr><td><textarea style="resize: none;" rows="5" cols="50" name="mensagem" [(ngModel)]="mensagem"></textarea></td></tr>
+		<tr><td><button ion-button block (click)="mandaEmail()">
+	    Manda email
+		</button></td></tr>		
+	</table>
+	</div>
+</div>
+</ion-content>
